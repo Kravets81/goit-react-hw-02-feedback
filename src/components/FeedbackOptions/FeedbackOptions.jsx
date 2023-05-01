@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import css from './FeedbackOption.module.css';
 
@@ -20,3 +21,8 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
     </ul>
   );
 }
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
